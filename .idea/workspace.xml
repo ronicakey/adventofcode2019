@@ -25,12 +25,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunManager" selected="Application.Day02">
+  <component name="RunManager" selected="Application.Day04">
     <configuration name="Day01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day01" />
       <module name="adventofcode2019" />
@@ -49,6 +49,14 @@
     </configuration>
     <configuration name="Day03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day03" />
+      <module name="adventofcode2019" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day04" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -79,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day04" />
         <item itemvalue="Application.Day02" />
         <item itemvalue="Application.Day03" />
         <item itemvalue="Application.Day01" />
@@ -111,21 +120,29 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1340" height="127" key="GridCell.Tab.0.bottom" timestamp="1575406171180">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1575486545671">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="127" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575406171180" />
-    <state width="1340" height="127" key="GridCell.Tab.0.center" timestamp="1575406171180">
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575486545671" />
+    <state width="1557" height="129" key="GridCell.Tab.0.bottom" timestamp="1575488148085">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="127" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575406171180" />
-    <state width="1340" height="127" key="GridCell.Tab.0.left" timestamp="1575406171179">
+    <state width="1557" height="129" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575488148085" />
+    <state width="1557" height="129" key="GridCell.Tab.0.center" timestamp="1575488148085">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="127" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575406171179" />
-    <state width="1340" height="127" key="GridCell.Tab.0.right" timestamp="1575406171180">
+    <state width="1557" height="129" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575488148085" />
+    <state width="1557" height="129" key="GridCell.Tab.0.left" timestamp="1575488148085">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="127" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575406171180" />
+    <state width="1557" height="129" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575488148085" />
+    <state width="1557" height="129" key="GridCell.Tab.0.right" timestamp="1575488148085">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="129" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575488148085" />
+    <state x="280" y="4" key="SettingsEditor" timestamp="1575486546700">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575486546700" />
   </component>
 </project>

@@ -105,7 +105,7 @@ public class Day03 {
     private static int getMinDist(Set<Dot> s1, Set<Dot> s2) {
         Set<Dot> intersect = intersectFromSets(s1, s2);
 
-        return intersect.stream().mapToInt(d -> d.getDistance(new Dot())).min().orElse(-1);
+        return intersect.stream().mapToInt(d -> d.getDistance(new Dot())).min().getAsInt();
     }
 
     private static int getMinSteps(Set<Dot> s1, Set<Dot> s2) {
@@ -115,7 +115,7 @@ public class Day03 {
         Map<Dot, Integer> map1 = setToMap(intersect1);
         Map<Dot, Integer> map2 = setToMap(intersect2);
 
-        return map1.keySet().stream().mapToInt(dot -> map1.get(dot) + map2.get(dot)).min().orElse(-1);
+        return map1.keySet().stream().mapToInt(dot -> map1.get(dot) + map2.get(dot)).min().getAsInt();
     }
 
     private static Map<Dot, Integer> setToMap(Set<Dot> set) {

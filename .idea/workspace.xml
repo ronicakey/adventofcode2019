@@ -25,38 +25,46 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunManager" selected="Application.Day06">
-    <configuration name="Day02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day02" />
+  <component name="RunManager" selected="Application.Day07">
+    <configuration name="Day01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day01" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventOfCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day02" />
+      <module name="adventofcode2019" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventOfCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Day03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day03" />
-      <module name="adventofcode2019" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day04" />
-      <module name="adventofcode2019" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day05" />
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day03" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -64,7 +72,15 @@
       </method>
     </configuration>
     <configuration name="Day06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day06" />
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day06" />
+      <module name="adventofcode2019" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day07" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -95,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day07" />
+        <item itemvalue="Application.Day02" />
+        <item itemvalue="Application.Day01" />
         <item itemvalue="Application.Day06" />
         <item itemvalue="Application.Day03" />
-        <item itemvalue="Application.Day05" />
-        <item itemvalue="Application.Day04" />
-        <item itemvalue="Application.Day02" />
       </list>
     </recent_temporary>
   </component>
@@ -133,29 +149,37 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="570" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1575632810135" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1575486545671">
+    <state x="630" y="113" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1575734618704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575486545671" />
-    <state width="1557" height="202" key="GridCell.Tab.0.bottom" timestamp="1575659260145">
+    <state x="630" y="113" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1600.860@0.0.1600.860" timestamp="1575734618704" />
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1575733655574">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="202" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575659260145" />
-    <state width="1557" height="202" key="GridCell.Tab.0.center" timestamp="1575659260144">
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575733655574" />
+    <state width="1557" height="257" key="GridCell.Tab.0.bottom" timestamp="1575757466340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="202" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575659260144" />
-    <state width="1557" height="202" key="GridCell.Tab.0.left" timestamp="1575659260144">
+    <state width="1557" height="257" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575757466340" />
+    <state width="1557" height="257" key="GridCell.Tab.0.center" timestamp="1575757466340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="202" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575659260144" />
-    <state width="1557" height="202" key="GridCell.Tab.0.right" timestamp="1575659260145">
+    <state width="1557" height="257" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575757466340" />
+    <state width="1557" height="257" key="GridCell.Tab.0.left" timestamp="1575757466340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="202" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575659260145" />
-    <state x="280" y="4" key="SettingsEditor" timestamp="1575486546700">
+    <state width="1557" height="257" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575757466340" />
+    <state width="1557" height="257" key="GridCell.Tab.0.right" timestamp="1575757466340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575486546700" />
+    <state width="1557" height="257" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575757466340" />
+    <state x="280" y="4" key="SettingsEditor" timestamp="1575734625497">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575734625497" />
+    <state x="504" y="323" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575734610961">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="504" y="323" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860@0.0.1600.860" timestamp="1575734610961" />
   </component>
 </project>

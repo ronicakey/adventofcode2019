@@ -51,8 +51,6 @@ public class Day07 {
         return signal;
     }
 
-
-
     public static void main(String[] args) {
         //part1
         System.out.println(getMaxSignal(getNumbers("day7.txt")));

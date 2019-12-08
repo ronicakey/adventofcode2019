@@ -41,10 +41,9 @@ public class Day08 {
 
     private static void getMessage(String[] layers, int width, int height) {
         String pixels = getPixelColor(layers, width * height);
-        String[] rows = pixels
-                .replaceAll("0", " ") //easier to read
-                .split("(?<=\\G.{" + width + "})");
-        Arrays.stream(rows).forEach(System.out::println);
+        Arrays.stream(pixels.replaceAll("0", " ") //easier to read
+                .split("(?<=\\G.{" + width + "})"))
+                .forEach(System.out::println);
     }
 
     public static void main(String[] args) {

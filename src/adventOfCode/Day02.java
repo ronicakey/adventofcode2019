@@ -2,56 +2,65 @@ package adventOfCode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
-
+import java.util.stream.Collectors;
 
 public class Day02 {
-    public static int[] getNumbers(String filename) {
+    public static List<Long> getNumbers(String filename) {
         try (Scanner input = new Scanner(new File(filename))){
-            return Arrays.stream(input.nextLine().trim().split(",")).mapToInt(Integer::parseInt).toArray();
+            return Arrays.stream(input.nextLine().trim().split(","))
+                    .mapToLong(Long::parseLong).boxed()
+                    .collect(Collectors.toList());
         } catch (FileNotFoundException e) {
             System.out.println(e);
         }
-        return new int[]{};
+        return new ArrayList<>();
     }
 
-    private static int doRepair(int[] numbers) {
-        for (int i = 0; i < numbers.length; i += 4) {
-            switch (numbers[i]) {
+    private static long doRepair(List<Long> list, long noun, long verb) {
+        List<Long> numbers = new ArrayList<>(list);
+        changeParameters(numbers, noun, verb);
+        for (int i = 0; i < numbers.size(); i += 4) {
+            switch (numbers.get(i).intValue()) {
                 case 99:
-                    return numbers[0];
+                    return numbers.get(0);
                 case 1:
-                    numbers[numbers[i + 3]] = numbers[numbers[i + 1]] + numbers[numbers[i + 2]];
+                    numbers.set(numbers.get(i + 3).intValue(), numbers.get(numbers.get(i + 1).intValue()) +
+                            numbers.get(numbers.get(i + 2).intValue()));
                     break;
                 case 2:
-                    numbers[numbers[i + 3]] = numbers[numbers[i + 1]] * numbers[numbers[i + 2]];
+                    numbers.set(numbers.get(i + 3).intValue(), numbers.get(numbers.get(i + 1).intValue()) *
+                            numbers.get(numbers.get(i + 2).intValue()));
                     break;
             }
         }
-        return numbers[0];
+        return numbers.get(0);
     }
 
-    private static int[] changeParameters(int noun, int verb, int[] array) {
-        int[] numbers = array.clone();
-        numbers[1] = noun;
-        numbers[2] = verb;
-        return numbers;
+    private static void changeParameters(List<Long> numbers, long noun, long verb) {
+        numbers.set(1, noun);
+        numbers.set(2, verb);
     }
 
-    public static void main(String[] args) {
-        int[] numbers  = getNumbers("day2.txt");
-        //part 1
-        System.out.println(doRepair(changeParameters(12, 2, numbers)));
-        //part 2
-        for (int noun = 0; noun < 100; noun++) {
-            for (int verb = 0; verb < 100; verb++) {
-                int result = doRepair(changeParameters(noun, verb, numbers));
+    private static long getAnswer(List<Long> list) {
+        for (long noun = 0L; noun < 100; noun++) {
+            for (long verb = 0L; verb < 100; verb++) {
+                long result = doRepair(list, noun, verb);
                 if (result == 19690720) {
-                    System.out.println(100 * noun + verb);
-                    return;
+                    return 100 * noun + verb;
                 }
             }
         }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        //part 1
+        System.out.println(doRepair(getNumbers("day2.txt"), 12L, 2L));
+        //part 2
+        System.out.println(getAnswer(getNumbers("day2.txt")));
     }
 }

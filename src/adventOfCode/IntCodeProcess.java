@@ -1,68 +1,113 @@
 package adventOfCode;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
-import static adventOfCode.Day05.getParams;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class IntCodeProcess {
-    private int[] numbers;
-    private int idx = 0;
-    private Deque<Integer> input = new ArrayDeque<>();
+    private Map<Integer, Long> numbers;
+    private int position = 0;
+    private int relativeBase = 0;
+    private Deque<Long> input = new ArrayDeque<>();
+    private Deque<Long> output = new ArrayDeque<>();
 
-    IntCodeProcess(int[] numbers, Integer phase) {
-        this.numbers = numbers.clone();
+    IntCodeProcess(List<Long> numbers) {
+        this.numbers = IntStream.range(0, numbers.size()).boxed()
+                .collect(Collectors.toMap(Function.identity(), numbers::get));
+    }
+
+    IntCodeProcess(List<Long> numbers, int phase) {
+        this(numbers);
         updateInput(phase);
     }
 
-    private void updateInput(int signal) {
-        input.addLast(signal);
+    private void updateInput(long...signal) {
+        Arrays.stream(signal).forEach(s -> input.addLast(s));
     }
 
-    public int run(int signal) {
+    public boolean hasOutput() {
+        return !output.isEmpty();
+    }
+
+    public Long getOutput() {
+        return output.pollFirst();
+    }
+
+    public void run(long...signal) {
         updateInput(signal);
-        while (numbers[idx] != 99) {
-            int[] params = getParams(numbers[idx]);
+        while (!numbers.get(position).equals(99L)) {
+            int[] params = getParams(numbers.get(position));
             switch (params[0]) {
                 case 1:
-                    numbers[numbers[idx + 3]] = numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] +
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2];
-                    idx += 4;
+                    numbers.put(getIndex(3, params), getValue(1, params) + getValue(2, params));
+                    position += 4;
                     break;
                 case 2:
-                    numbers[numbers[idx + 3]] = numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] *
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2];
-                    idx += 4;
+                    numbers.put(getIndex(3, params), getValue(1, params) * getValue(2, params));
+                    position += 4;
                     break;
                 case 3:
-                    numbers[numbers[idx + 1]] = input.pollFirst();
-                    idx += 2;
-                    break;
+                    if (input.peekFirst() == null) {
+                        return;
+                    } else {
+                        numbers.put(getIndex(1, params), input.pollFirst());
+                        position += 2;
+                        break;
+                    }
                 case 4:
-                    int output = numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1];
-                    idx += 2;
-                    return output;
+                    output.addLast(getValue(1, params));
+                    position += 2;
+                    break;
                 case 5:
-                    idx = numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] != 0 ?
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2] : idx + 3;
+                    position = getValue(1, params) != 0L ? getValue(2, params).intValue() : position + 3;
                     break;
                 case 6:
-                    idx = numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] == 0 ?
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2] : idx + 3;
+                    position = getValue(1, params) == 0L ? getValue(2, params).intValue() : position + 3;
                     break;
                 case 7:
-                    numbers[numbers[idx + 3]] = (numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] <
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2]) ? 1 : 0;
-                    idx += 4;
+                    numbers.put(getIndex(3, params), getValue(1, params) < getValue(2, params) ? 1L : 0L);
+                    position += 4;
                     break;
                 case 8:
-                    numbers[numbers[idx + 3]] = (numbers[params[1] == 0 ? numbers[idx + 1] : idx + 1] ==
-                            numbers[params[2] == 0 ? numbers[idx + 2] : idx + 2]) ? 1 : 0;
-                    idx += 4;
+                    numbers.put(getIndex(3, params), getValue(1, params).equals(getValue(2, params)) ? 1L : 0L);
+                    position += 4;
                     break;
+                case 9:
+                    relativeBase += getValue(1, params);
+                    position += 2;
+                    break;
+                default:
+                    return;
             }
         }
-        return Integer.MIN_VALUE;
     }
 
+    private int[] getParams(long code) {
+        int command = (int) code;
+        int[] params = new int[4];
+        params[0] = command % 100;
+        params[1] = command / 100 % 10;
+        params[2] = command / 1000 % 10;
+        params[3] = command / 10000;
+        return params;
+    }
+
+    private int getIndex(int idx, int[] params) {
+        switch(params[idx]) {
+            case 0:
+                return numbers.get(position + idx).intValue();
+            case 1:
+                return position + idx;
+            case 2:
+                return relativeBase + numbers.get(position + idx).intValue();
+            default:
+                return -1;
+        }
+    }
+
+    private Long getValue(int idx, int[] params) {
+        int index = getIndex(idx, params);
+        return numbers.getOrDefault(index, 0L);
+    }
 }

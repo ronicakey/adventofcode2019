@@ -23,7 +23,7 @@ public class IntCodeProcess {
     }
 
     private void updateInput(long...signal) {
-        Arrays.stream(signal).forEach(s -> input.addLast(s));
+        Arrays.stream(signal).forEach(input::addLast);
     }
 
     public boolean hasOutput() {

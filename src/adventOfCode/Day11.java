@@ -41,6 +41,5 @@ public class Day11 {
         System.out.println(runTests(getNumbers("day11.txt")));
         //part 2
         printId(getNumbers("day11.txt"));
-
     }
 }

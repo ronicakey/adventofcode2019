@@ -22,6 +22,10 @@ public class IntCodeProcess {
         updateInput(phase);
     }
 
+    public void setFirstOpCode(Long code) {
+        numbers.put(0, code);
+    }
+
     private void updateInput(long...signal) {
         Arrays.stream(signal).forEach(input::addLast);
     }

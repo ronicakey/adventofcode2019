@@ -74,6 +74,7 @@ public class HullRobot {
     private Map<Position, Integer> tiles = new HashMap<>();
     private Deque<Integer> input = new ArrayDeque<>();
     private Deque<Integer> output = new ArrayDeque<>();
+    private final int inputSize = 2;
 
     HullRobot(int color) {
         //set the color of the first tile
@@ -88,8 +89,12 @@ public class HullRobot {
         return output.pollFirst();
     }
 
+    public int getInputSize() {
+        return inputSize;
+    }
+
     public void run() {
-        while (input.size() >= 2) {
+        while (input.size() >= inputSize) {
             paintTile();
             moveAround();
             updateOutput();

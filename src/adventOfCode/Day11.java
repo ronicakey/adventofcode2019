@@ -1,6 +1,7 @@
 package adventOfCode;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 import static adventOfCode.Day02.getNumbers;
 
@@ -8,12 +9,13 @@ public class Day11 {
 
     public static int runTests(List<Long> numbers) {
         HullRobot robot = new HullRobot(0);
+        int inputSize = robot.getInputSize();
         IntCodeProcess program = new IntCodeProcess(numbers);
         while (true) {
             program.run(robot.getOutput());
             if (program.hasOutput()) {
-                robot.loadCommands(program.getOutput().intValue());
-                robot.loadCommands(program.getOutput().intValue());
+                IntStream.range(0, inputSize)
+                        .forEach(i -> robot.loadCommands(program.getOutput().intValue()));
                 robot.run();
             } else
                 return robot.getNumPaintedTiles();
@@ -22,12 +24,13 @@ public class Day11 {
 
     public static void printId(List<Long> numbers) {
         HullRobot robot = new HullRobot(1);
+        int inputSize = robot.getInputSize();
         IntCodeProcess program = new IntCodeProcess(numbers);
         while (true) {
             program.run(robot.getOutput());
             if (program.hasOutput()) {
-                robot.loadCommands(program.getOutput().intValue());
-                robot.loadCommands(program.getOutput().intValue());
+                IntStream.range(0, inputSize)
+                        .forEach(i -> robot.loadCommands(program.getOutput().intValue()));
                 robot.run();
             } else {
                 robot.printId();

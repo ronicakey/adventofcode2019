@@ -33,7 +33,7 @@ public class Day11 {
                         .forEach(i -> robot.loadCommands(program.getOutput().intValue()));
                 robot.run();
             } else {
-                robot.printId();
+                robot.printMap();
                 return;
             }
         }

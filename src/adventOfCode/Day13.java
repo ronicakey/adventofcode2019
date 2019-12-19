@@ -25,7 +25,7 @@ public class Day13 {
         ArcadeGame game = new ArcadeGame();
         int inputSize = game.getInputSize();
         IntCodeProcess program = new IntCodeProcess(numbers);
-        program.setFirstOpCode(2L);
+        program.setOpCode(0, 2);
         while (true) {
             if (game.hasOutput()) {
                 //game.printMap();

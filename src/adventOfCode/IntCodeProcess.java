@@ -22,8 +22,8 @@ public class IntCodeProcess {
         updateInput(phase);
     }
 
-    public void setFirstOpCode(Long code) {
-        numbers.put(0, code);
+    public void setOpCode(int index, long code) {
+        numbers.put(index, code);
     }
 
     private void updateInput(long...signal) {

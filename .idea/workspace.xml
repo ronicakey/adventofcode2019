@@ -29,14 +29,15 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodingStuff" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunManager" selected="Application.Day14">
-    <configuration name="Day02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day02" />
+  <component name="RunManager" selected="Application.Day19">
+    <configuration name="Day11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day11" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -49,8 +50,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day09" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day09" />
+    <configuration name="Day15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day15" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -63,8 +64,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day12" />
+    <configuration name="Day17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day17" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -77,8 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day13" />
+    <configuration name="Day18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day18" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -91,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day14" />
+    <configuration name="Day19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventOfCode.Day19" />
       <module name="adventofcode2019" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -129,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Day14" />
-        <item itemvalue="Application.Day02" />
-        <item itemvalue="Application.Day13" />
-        <item itemvalue="Application.Day09" />
-        <item itemvalue="Application.Day12" />
+        <item itemvalue="Application.Day19" />
+        <item itemvalue="Application.Day18" />
+        <item itemvalue="Application.Day17" />
+        <item itemvalue="Application.Day15" />
+        <item itemvalue="Application.Day11" />
       </list>
     </recent_temporary>
   </component>
@@ -163,10 +164,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="570" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1576157448100">
+    <state x="530" y="184" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576439534751">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="570" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1576157448100" />
+    <state x="530" y="184" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1576439534751" />
+    <state x="570" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1576431596062">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="570" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1576431596062" />
     <state x="630" y="113" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1575734618704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -175,33 +180,37 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="596" y="314" width="408" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1576102470845" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1575733655574">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1576707120599">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575733655574" />
-    <state width="1557" height="236" key="GridCell.Tab.0.bottom" timestamp="1576365807337">
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576707120599" />
+    <state width="1557" height="28" key="GridCell.Tab.0.bottom" timestamp="1576790520579">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="236" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1576365807336" />
-    <state width="1557" height="236" key="GridCell.Tab.0.center" timestamp="1576365807336">
+    <state width="1557" height="28" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1576790520579" />
+    <state width="1557" height="28" key="GridCell.Tab.0.center" timestamp="1576790520579">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="236" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1576365807336" />
-    <state width="1557" height="236" key="GridCell.Tab.0.left" timestamp="1576365807336">
+    <state width="1557" height="28" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1576790520579" />
+    <state width="1557" height="28" key="GridCell.Tab.0.left" timestamp="1576790520579">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="236" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1576365807336" />
-    <state width="1557" height="236" key="GridCell.Tab.0.right" timestamp="1576365807336">
+    <state width="1557" height="28" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1576790520579" />
+    <state width="1557" height="28" key="GridCell.Tab.0.right" timestamp="1576790520579">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="236" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1576365807336" />
-    <state x="280" y="4" key="SettingsEditor" timestamp="1575893900037">
+    <state width="1557" height="28" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1576790520579" />
+    <state x="280" y="4" key="SettingsEditor" timestamp="1576516262254">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575893900037" />
+    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1576516262254" />
     <state x="504" y="323" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575734610961">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="504" y="323" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860@0.0.1600.860" timestamp="1575734610961" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1576539898328">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1576539898328" />
   </component>
 </project>
